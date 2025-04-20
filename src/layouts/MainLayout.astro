@@ -1,0 +1,247 @@
+---
+
+
+// Makes titles unique for each page
+const { pageTitle } = Astro.props;
+
+//Sets up Image optimization
+import { Image } from "astro:assets";
+
+
+// Template Assets
+import mainLogo from '../images/template/garywintlelogo.svg';
+import menu from '../images/template/mobile-menu.svg';
+import menuClose from '../images/template/mobile-menu-close.svg';
+
+//CSS Styles
+import '../styles/global.css';
+import '../styles/style.css';
+import '../styles/queries.css';
+
+//Analytics
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+
+
+
+---
+
+<html lang="en">
+	<head>
+
+    <!-- Analytics -->
+<GoogleAnalytics />
+
+
+
+<!-- ***************
+      METADATA
+******************** -->
+
+		<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Need engaging print and web design for your business? Come check out the work of multimedia artist and designer Gary Wintle"
+    />
+    <meta
+      name="keywords"
+      content="Gary Wintle, HTML, CSS, JavaScript, Photoshop, freelancer, illustrator, book design, for hire, designer in Japan, web developer in Japan, UX artist"
+    />
+    <meta name="author" content="Gary Wintle" />
+
+    <!-- ****************
+      Open Graph aka Social Media Social Pic Link Stuff 
+    **********************-->
+
+    <meta property="og:title" content="Gary Wintle | Product Illustrator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.garywintle.com/" />
+    <meta property="og:image" content="https://www.garywintle.com/opengraph/GW-logo-social-banner.png" />
+    <meta property="og:site_name" content="Gary Wintle" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Specific -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@GaryWintle" />
+<meta name="twitter:title" content="Gary Wintle's Portfolio" />
+<meta name="twitter:description" content="Gary Wintle's UX/UI and Illustration Portfolio. Showcasing a range of character designs and interactive user interfaces." />
+<meta name="twitter:image" content="https://www.garywintle.com/opengraph/GW-logo-social-banner.png" />
+
+
+<!-- ***************
+      BROWSER ICON STUFF
+******************** -->
+
+<!-- Browser Icon -->
+<link rel="icon" href="/favicon.svg" type="image/svg" />
+
+<!-- Apple Mobile Icon -->
+    <link rel="apple-touch-icon" href="/img/icon-files/GW-logo-apple.png" />
+
+<!-- Android Mobile Icon -->
+    <!-- <link rel="manifest" href="manifest.webmanifest" /> -->
+
+<!-- Apple Top Bar Colour -->
+    <meta name="theme-color" content="#12283a" />
+
+
+<!-- ***************
+      JAVASCRIPT
+******************** -->
+
+<!-- Astro -->
+    <meta name="generator" content={Astro.generator} />
+
+<!-- Lottie -->
+
+<!-- <link rel="preconnect" href="https://unpkg.com" crossorigin> -->
+
+<script defer src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<!-- 
+    <script src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script> -->
+
+
+    <script defer src="/js/lottie-inter.js"></script>
+
+
+<!-- GSap -->
+    <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      ></script>
+      <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      ></script>
+      <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"
+      ></script>
+      <script defer src="/js/gsap.js"></script>
+
+<!-- Lightbox -->
+    <!-- <link href="/lightbox/css/lightbox.css" rel="stylesheet" /> -->
+
+<!-- Font Stuff -->
+
+<!-- Georama Font -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/georama@latest/latin-800-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Smooth Scrolling -->
+    <!-- <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script> -->
+
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.9/dist/smoothscroll.min.js"></script> -->
+
+    <!-- <script>
+      smoothscroll.polyfill();
+    </script> -->
+
+
+
+<!-- Generic -->
+    <script src="../scripts/script.js"></script>
+
+
+    <title>{pageTitle}</title>
+	</head>
+	<body>
+    
+<!-- HEADER LOGO -->
+
+		<div class="header-background">
+      <header class="header sticky">
+        <a href="/"
+          ><Image
+          loading="eager"
+            class="main-logo"
+            alt="Gary Wintle Logo"
+            src={mainLogo}
+             /></a>
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+<!-- Services -->
+            <li><a href="#services"
+              class="main-nav-link">Services</a></li>
+<!-- Portfolio -->
+            <li><a class="main-nav-link" href="#portfolio">Portfolio</a></li>
+<!-- About -->
+            <li><a class="main-nav-link" href="#about">About</a></li>
+<!-- Let's Talk -->
+            <li><a
+                class="main-nav-link nav-cta drop-shadow"
+                href="#lets-talk"
+                >Let's Talk!</a
+              >
+            </li>
+          </ul>
+        </nav>
+      
+
+        <!-- MOBILE NAV COMPONENTS -->
+
+        <button class="btn-mobile-nav">
+            <!-- "menu-icon" was name instead of id before -->
+          <Image
+            class="icon-mobile-nav"
+          name="menu-icon" 
+            src={menu}
+            alt="open mobile menu"
+          />
+           <!-- "close-icon" was name instead of id before -->
+          <Image
+            class="icon-mobile-nav"
+            name="close-icon"
+            src={menuClose}
+            alt="close mobile menu"
+          />
+        </button>
+      </header>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+
+    <div class="back-to-top"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <lottie-player
+          id="btt"
+          aria-label="Back to top"
+          src="/animations/back-to-top.json"
+          background="transparent"
+          speed="2"
+          alt="Back to the top of the page"
+></lottie-player>
+       </div>
+
+    <!-- START OF CONTENT -->
+
+
+	<slot />
+
+ <!-- END OF CONTENT -->
+
+    <!-- ***** FOOTER ***** -->
+		<footer class="footer-container">
+      <span class="footer-text"
+        >© <span class="year">0000</span> Gary Wintle Inc. Illustrated,
+        designed, animated, and coded by finger tips. All rights reserved.</span
+      >
+
+
+    </footer>
+</body>
+</html>

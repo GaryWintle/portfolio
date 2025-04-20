@@ -1,0 +1,694 @@
+---
+
+import MainLayout from "../layouts/MainLayout.astro"
+
+import { Image } from "astro:assets";
+
+
+const pageTitle = "Gary Wintle";
+
+// Template Images
+import Underline from '../images/template/bezier-underline.svg';
+
+// Services Images
+
+//-- mediamites
+import mediamiteIllustration from '../images/homepage/mediamites/mediamite-illustration.svg';
+import mediamiteGraphicDesign from '../images/homepage/mediamites/mediamite-graphicdesign.svg';
+import mediamiteWebDesign from '../images/homepage/mediamites/mediamite-webdesign.svg';
+import mediamiteMotionGraphics from '../images/homepage/mediamites/mediamite-mograph.svg';
+
+//-- companylogos
+import iconPhotoshop from '../images/homepage/software-logos/icon-photoshop.svg';
+import iconIllustrator from '../images/homepage/software-logos/icon-illustrator.svg';
+import iconIndesign from '../images/homepage/software-logos/icon-indesign.svg';
+import iconFigma from '../images/homepage/software-logos/icon-figma.svg';
+import iconHTML from '../images/homepage/software-logos/icon-html.svg';
+import iconCSS from '../images/homepage/software-logos/icon-css.svg';
+import iconJavascript from '../images/homepage/software-logos/icon-javascript.svg';
+import iconAfterEffects from '../images/homepage/software-logos/icon-after-effects.svg';
+import iconPremiere from '../images/homepage/software-logos/icon-premiere.svg';
+import iconAudition from '../images/homepage/software-logos/icon-audition.svg';
+import iconLottie from '../images/homepage/software-logos/icon-lottie.svg';
+
+// Portfolio Thumbnails
+import portThumbnail01 from '../images/homepage/portfolio-thumbnails/port-thumbnail-cranimals@2x.png';
+import portThumbnail02 from '../images/homepage/portfolio-thumbnails/port-thumbnail-surfin-burrito@2x.png';
+import portThumbnail03 from '../images/homepage/portfolio-thumbnails/port-thumbnail-phbooks@2x.png';
+import portThumbnail04 from '../images/homepage/portfolio-thumbnails/port-thumbnail-rakuten@2x.png';
+import portThumbnail05 from '../images/homepage/portfolio-thumbnails/port-thumbnail-bumblebee@2x.png';
+import portThumbnail06 from '../images/homepage/portfolio-thumbnails/port-thumbnail-dankarson@2x.png';
+
+// About Me Images
+import aboutMePhoto from '../images/homepage/about-me/gw-profile.png';
+
+// Let's Talk!
+
+//-- email
+import emailDefault from '../images/homepage/contact/email-default.svg';
+import emailHover from '../images/homepage/contact/email-hover.svg';
+
+//-- LinkedIn
+import linkedInDefault from '../images/homepage/social-media/social-linkedin-default.svg';
+import linkedInHover from '../images/homepage/social-media/social-linkedin-hover.svg';
+
+//-- Instagram
+import instagramDefault from '../images/homepage/social-media/social-instagram-default.svg';
+import instagramHover from '../images/homepage/social-media/social-instagram-hover.svg';
+
+//-- X/Twitter
+import xDefault from '../images/homepage/social-media/social-x-default.svg';
+import xHover from '../images/homepage/social-media/social-x-hover.svg';
+
+//-- Dribbble
+import dribbbleDefault from '../images/homepage/social-media/social-dribbble-default.svg';
+import dribbbleHover from '../images/homepage/social-media/social-dribbble-hover.svg';
+---
+
+<MainLayout pageTitle={pageTitle}>
+
+
+	
+<!-- ******************************
+      
+                    HERO
+
+      ****************************** -->
+	
+
+<main class="homepage-wrapper">
+			      <section class="section-hero">
+        <div class="hero">
+
+          <!-- hero text box -->
+<div class="hero-text-box">
+            <h1 class="hero-title hero-title-addon">Product Design with an Artist's Touch!</h1>
+
+
+						
+            <p class="hero-description">
+
+							Avoid getting lost in a sea of cookie-cutter brands. Maximize your business' potential with stand out custom print & web design. 
+            </p>
+
+            <div class="hero-buttons-spacing">
+
+              <!-- Call to Action -->
+              <a class="hero-nav-link drop-shadow" href="#lets-talk"
+                >Let's Talk!</a
+              >
+
+              <!-- Go to Portfolio -->
+              <a class="hero-nav-link port-cta drop-shadow" href="#portfolio"
+                >Go to Portfolio</a
+              >
+            </div>
+          </div>
+
+          <!-- hero image box -->
+						<div class="hero-image-box">
+							<!-- <img src="/animations/test.webp" alt=""> -->
+							<lottie-player
+              src="/animations/hero-animation.json"
+              class="gw-lottie"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              alt="Animation of an illustrated Gary"
+							
+						
+							
+            ></lottie-player>
+						<!-- <LottieHero src="/animations/hero-animation.json" 
+						autoplay="visible" 
+						id="hero-animations"/> -->
+          </div>
+        </div>
+      </section>
+	
+
+	<!-- ******************************
+		
+								SERVICES
+
+		****************************** -->
+
+	<section class="section-container">
+		<div class="section-titletext-container short-top-text-container">
+			<h2 id="services" class="subheading-title">Services</h2>
+			<Image
+				width="376"
+				height="26"
+				class="header-underline"
+				src={Underline}
+				alt="bezier unlerline decoration"
+				loading="lazy"
+			/>
+			<p class="section-body-text">
+				Here's some of the tools we'll use to put your branding headaches to
+				rest. I'm happy to work solo, in a team, or put together a team to
+				make your ideas shine.
+			</p>
+		</div>
+		<div class="services-group">
+
+			<!-- SERVICES / ILLUSTRATIONS -->
+
+			<div class="services-media">
+				<Image
+					width="130"
+					height="130"
+					class="mediamite-img"
+					alt="Cute Illustration Icon"
+					src={mediamiteIllustration}
+				/>
+				<p class="services-type-title">Illustration</p>
+				<p class="services-type-subtitle">mascots | books | games</p>
+				<p class="services-body">
+					All my digital work starts with classic pencil and paper. Let's
+					elevate your brand with a unique look just for you.
+				</p>
+				<div class="small-flex-space" data-tool-tip="Photoshop | Illustrator">
+					<Image
+						width="24"
+						height="24"
+						class="services-app-logo"
+						alt="Adobe Photoshop Icon"
+						src={iconPhotoshop}
+					/>
+					<Image
+						width="24"
+						height="24"
+						class="services-app-logo"
+						alt="Adobe Illustrator Icon"
+						src={iconIllustrator}
+					/>
+				</div>
+			</div>
+
+			<!-- SERVICES / GRAPHIC DESIGN -->
+
+			<div class="services-media">
+				<Image
+					width="130"
+					height="130"
+					class="mediamite-img"
+					alt="Cute Graphic Design Icon"
+					src={mediamiteGraphicDesign}
+				/>
+				<p class="services-type-title">Graphic Design</p>
+				<p class="services-type-subtitle">Signs | Books | Merch</p>
+				<p class="services-body">
+					I’ve coordinated complex projects from dream to design to print at
+					huge volumes for many years.
+				</p>
+				<div class="small-flex-space" data-tool-tip="Indesign">
+					<Image
+						width="24"
+						height="24"
+						class="services-app-logo"
+						alt="Adobe Indesign Icon"
+						src={iconIndesign}
+					/>
+				</div>
+			</div>
+
+			<!-- SERVICES / WEB DESIGN -->
+
+			<div class="services-media">
+				<Image
+					width="130"
+					height="130"
+					class="mediamite-img"
+					alt="Cute Web Design Icon"
+					src={mediamiteWebDesign}
+				/>
+				<p class="services-type-title">Web Design</p>
+				<p class="services-type-subtitle">websites | app design</p>
+				<p class="services-body">
+					I use my skills as an illustrator and designer in all my UX
+					projects. This site was coded by me too.
+				</p>
+				<div
+					class="small-flex-space"
+					data-tool-tip="Figma | HTML | CSS | Javascript"
+				>
+					<Image
+						class="services-app-logo"
+						alt="Figma Icon"
+						src={iconFigma}
+						width="24"
+						height="24"
+					/>
+
+					<Image
+						class="services-app-logo"
+						alt="HTML Icon"
+						src={iconHTML}
+						width="24"
+						height="24"
+					/>
+					<Image
+						class="services-app-logo"
+						alt="CSS Icon"
+						src={iconCSS}
+						width="24"
+						height="24"
+					/>
+					<Image
+						class="services-app-logo"
+						alt="Javascript Icon"
+						src={iconJavascript}
+						width="24"
+						height="24"
+					/>
+				</div>
+			</div>
+
+			<!-- SERVICES / MOTION GRAPHICS -->
+
+			<div class="services-media">
+				<Image
+					width="130"
+					height="130"
+					class="mediamite-img"
+					alt="Cute Motion Graphics Icon"
+					src={mediamiteMotionGraphics}
+				/>
+				<p class="services-type-title">Motion Graphics</p>
+				<p class="services-type-subtitle">Ads | Mobile Games</p>
+
+				<p class="services-body">
+					I use vector graphics, after effects and lottie to bring engaging
+					motion to your big ideas.
+				</p>
+				<div
+					class="small-flex-space"
+					data-tool-tip="After Effects | Premiere | Audition | Lottie"
+				>
+					<Image
+						width="24"
+						height="24"
+						class="services-app-logo"
+						alt="Adobe After Effects Icon"
+						src={iconAfterEffects}
+					/>
+					<Image
+						width="24"
+						height="24"
+						class="services-app-logo"
+						alt="Adobe Premiere Icon"
+						src={iconPremiere}
+					/>
+					<Image
+						width="24"
+						height="24"
+						class="services-app-logo"
+						alt="Adobe Audition Icon"
+						src={iconAudition}
+					/>
+					<Image
+						width="24"
+						height="24"
+						class="services-app-logo"
+						alt="Lottie Icon"
+						src={iconLottie}
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ******************************
+		
+		PORTFOLIO
+
+		****************************** -->
+
+	<section
+		aria-labelledby="link-port"
+		class="section-container section-container-portfolio"
+	>
+		<div
+			class="section-titletext-container section-titletext-container-portfolio"
+		>
+			<h2 id="portfolio" class="subheading-title text-ondark drop-shadow">
+				Portfolio
+			</h2>
+			<Image
+				width="376"
+				height="26"
+				class="header-underline flipped"
+				src={Underline}
+				alt="bezier unlerline decoration"
+			/>
+			<p class="section-body-text text-ondark">
+				I've done print and web projects from web banners to fully illustrated
+				books. Please check out how I can bring value to your project.
+			</p>
+		</div>
+		<div class="portfolio-grid">
+
+			<!-- Portfolio / Cranimals -->
+	<a class="portfolio-link" href="/cranimals/"
+				><div class="portfolio-card">
+						<Image
+							width="338"
+							height="338"
+							class="port-thumbnail-img"
+							alt="Cranimals Zen Dogfood"
+							src={portThumbnail01}
+							loading="lazy"
+							quality="high"
+						/>
+
+					<div class="port-thumbnail-textbox">
+						<p class="port-type-title">Cranimals</p>
+						<p class="port-type-subtitle">mascot | logo | packaging</p>
+						<p class="port-body">
+							"Zen Dog" branding created to promote healthy dog food.
+						</p>
+					</div>
+				</div></a
+			>
+
+			<!-- Portfolio / The Surfin' Burrito -->
+			<a class="portfolio-link" href="/surfinburrito/"
+				><div class="portfolio-card">
+	<Image
+							width="338"
+							height="338"
+							class="port-thumbnail-img"
+							alt="The Surfin' Burrito Donkey"
+							src={portThumbnail02}
+							loading="lazy"
+							quality="high"
+						/>
+					</picture>
+					<div class="port-thumbnail-textbox">
+						<p class="port-type-title">The Surfin' Burrito</p>
+						<p class="port-type-subtitle">mascot | logo | t-shirts</p>
+						<p class="port-body">
+							Mascot redesign for Cancun's world-famous burrito stand.
+						</p>
+					</div>
+				</div></a
+			>
+
+			<!-- Portfolio / Pothead Books -->
+			<a
+				class="portfolio-link"
+				href="/potheadbooks/"
+				data-lightbox="image-1"
+				><div class="portfolio-card">
+						<Image
+							width="338"
+							height="338"
+							class="port-thumbnail-img"
+							alt="Pothead Books Game Character Illustration"
+							src={portThumbnail03}
+							loading="lazy"
+							quality="high"
+						/>
+					<div class="port-thumbnail-textbox">
+						<p class="port-type-title">Pothead Books</p>
+						<p class="port-type-subtitle">Books | Boardgames</p>
+						<p class="port-body">
+							Book and game making from character creation to print.
+						</p>
+					</div>
+				</div></a
+			>
+
+			<!-- Portfolio / Rakuten -->
+			<a class="portfolio-link" href="/rakuten/"
+				><div class="portfolio-card">
+						<Image
+							width="338"
+							height="338"
+							class="port-thumbnail-img"
+							alt="Rakuten Illustration with a Godzilla-looking kaiju high-fiving a King Kong-looking kaiju"
+							src={portThumbnail04}
+							loading="lazy"
+							quality="high"
+						/>
+				
+
+					<div class="port-thumbnail-textbox">
+						<p class="port-type-title">Rakuten</p>
+						<p class="port-type-subtitle">Illustration | Promo Merch</p>
+						<p class="port-body">
+							New York x Tokyo event art and promo merch.
+						</p>
+					</div>
+				</div></a
+			>
+
+			<!-- Portfolio / Bumblebee English -->
+
+			<a class="portfolio-link" href="/bumblebee/">
+				<div class="portfolio-card">
+						<Image
+							width="338"
+							height="338"
+							class="port-thumbnail-img"
+							alt="Cute little bumblebee with Bumblebee English logo"
+							src={portThumbnail05}
+							loading="lazy"
+							quality="high"
+						/>
+					</picture>
+					<div class="port-thumbnail-textbox">
+						<p class="port-type-title">Bumblebee English</p>
+						<p class="port-type-subtitle">Mascot | Logo | Branding</p>
+						<p class="port-body">Branding for Osaka-based school.</p>
+					</div>
+				</div></a
+			>
+
+			<!-- Portfolio / Dank Arson -->
+			<a class="portfolio-link" href="/dankarson/"
+				><div class="portfolio-card">
+						<Image
+							width="338"
+							height="338"
+							class="port-thumbnail-img"
+							alt="Dank Arson Logo"
+							src={portThumbnail06}
+							loading="lazy"
+							quality="high"
+						/>
+					</picture>
+					<div class="port-thumbnail-textbox">
+						<p class="port-type-title">Dank Arson</p>
+						<p class="port-type-subtitle">Branding | motion graphics</p>
+						<p class="port-body">
+							Motion graphics and branding for Youtube channel.
+						</p>
+					</div>
+				</div></a
+			>
+		</div>
+	</section>
+
+	<!-- ******************************
+		
+								ABOUT ME
+
+		****************************** -->
+
+	<section
+		class="section-container additional-bottom-margin"
+	>
+		<div class="section-titletext-container short-top-text-container">
+			<h2 id="about" class="subheading-title">About Me</h2>
+			<Image
+				width="376"
+				height="26"
+				class="header-underline"
+				src={Underline}
+				alt="bezier unlerline decoration"
+			/>
+			<p class="section-body-text">
+				Hi, I'm Gary Wintle. A Canadian multimedia designer based in Japan.
+			</p>
+		</div>
+		<div class="about-me-grid">
+			<div class="about-me-selfie-container">
+				<Image
+					class="about-me-selfie"
+					alt="Gary Wintle"
+					src={aboutMePhoto}
+					loading="lazy"
+					quality="high"
+					width="400"
+					height="442"
+				/>
+			</div>
+			<div class="about-me-flex">
+				<p class="about-me-bodytext">
+					After graduating from Interactive Multimedia at Algonquin College in
+					Ottawa, Canada I moved to Vancouver and worked there on Magazine
+					illustration and design for productions like Cannabis Culture
+					Magazine, Skeet, and Diver Magazine.
+				</p>
+
+				<p class="about-me-bodytext">
+					Seeing that many of these magazine businesses needed more than just
+					magazine design, I soon found a passion in making signage and other
+					branding merch for their respective stores.
+				</p>
+				<p class="about-me-bodytext">
+					After travelling and designing around the world for a few years,
+					I’ve settled in Japan. It’s the perfect place to find artistic design
+					inspiration for the many amazing clients I’m lucky enough to work
+					with.
+				</p>
+
+
+
+
+				<lottie-player
+				class="about-me-pencil"
+				id="firstLottie"
+				src="/animations/lottie-pencil.json"
+				
+			></lottie-player>
+		
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ******************************
+		
+								LET'S TALK!
+
+		****************************** -->
+
+	<section class="last-container">
+		<div><h2 id="lets-talk" class="subheading-title text-ondark">
+			Let's Talk!
+		</h2>
+		<Image
+			width="376"
+			height="26"
+			class="header-underline flipped"
+			src={Underline}
+			alt="bezier unlerline decoration"
+		/>
+		<p class="section-body-text text-ondark lets-talk-text">
+			Email me and I'll get back to you within 24 hours.
+		</p></div>
+
+		<!-- email button -->
+		<div class="svg-rollover">
+			<a
+				href="mailto:&#104;&#101;&#121;&#064;&#103;&#097;&#114;&#121;&#119;&#105;&#110;&#116;&#108;&#101;&#046;&#099;&#111;&#109;?subject=Hey%20Gary%20Wintle!"
+				target="_top"
+			>
+				<Image
+					class="call-to-action-btn social-media-btn default-svg"
+					src={emailDefault}
+					alt="Link to Email Gary Wintle"
+				/>
+				<Image
+					class="call-to-action-btn social-media-btn hover-svg"
+					src={emailHover}
+					alt="Link to Email Gary Wintle"
+				/>
+			</a>
+		</div>
+
+		<!-- Social Buttons -->
+
+		<div class="social-media-flex">
+
+			<!-- linkedin -->
+			<div class="svg-rollover">
+				<a
+					href="https://www.linkedin.com/in/gary-wintle-9168962/"
+					target="_blank"
+				>
+					<Image
+						class="social-media-btn default-svg"
+						src={linkedInDefault}
+						alt="Gary Wintle's Linkedin Account"
+						width="62"
+						height="62"
+					/>
+					<Image
+						class="social-media-btn hover-svg"
+						src={linkedInHover}
+						alt="Gary Wintle's Linkedin Account"
+						width="62"
+						height="62"
+					/>
+				</a>
+			</div>
+
+			<!-- instagram -->
+			<div class="svg-rollover">
+				<a href="https://www.instagram.com/garywintle/" target="_blank">
+					<Image
+						class="social-media-btn default-svg"
+						src={instagramDefault}
+						alt="Gary Wintle's Instagram Account"
+						width="62"
+						height="62"
+					/>
+					<Image
+						class="social-media-btn hover-svg"
+						src={instagramHover}
+						alt="Gary Wintle's Instagram Account"
+						width="62"
+						height="62"
+					/>
+				</a>
+			</div>
+
+			<!-- Twitter/X -->
+			<div class="svg-rollover">
+				<a href="https://twitter.com/GaryWintle" target="_blank">
+					<Image
+						class="social-media-btn default-svg"
+						src={xDefault}
+						alt="Gary Wintle's X Account"
+						width="62"
+						height="62"
+					/>
+					<Image
+						class="social-media-btn hover-svg"
+						src={xHover}
+						alt="Gary Wintle's X Account"
+						width="62"
+						height="62"
+					/>
+				</a>
+			</div>
+
+			<!-- Dribbble -->
+			<div class="svg-rollover">
+				<a href="https://dribbble.com/GaryWintle" target="_blank">
+					<Image
+						class="social-media-btn default-svg"
+						src={dribbbleDefault}
+						alt="Gary Wintle's Dribbble Account"
+						width="62"
+						height="62"
+						
+					/>
+					<Image
+						class="social-media-btn hover-svg"
+						src={dribbbleHover}
+						alt="Gary Wintle's Dribbble Account"
+						width="62"
+						height="62"
+					/>
+				</a>
+			</div>
+		</div>
+	</section>
+	</main>
+</MainLayout>
