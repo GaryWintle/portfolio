@@ -74,3 +74,9 @@ window.addEventListener("scroll", () => {
 // Current Year Footer
 const yearEl = document.querySelector(".year");
 yearEl.textContent = new Date().getFullYear();
+
+const newFeature = function () {
+  console.log("Welcome to my nightmare!");
+};
+
+newFeature();
